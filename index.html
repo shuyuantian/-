@@ -32,6 +32,14 @@
 		<label for="top" class="tab">top</label>
 		<label for="middle" class="tab">middle</label>
 		<label for="bottom" class="tab">bottom</label>
+	<script src="https://recaptcha.net/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       console.log(token)
+    });
+});
+</script>
 	</div>
 </div>
 </body>
