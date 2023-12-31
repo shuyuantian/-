@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>ÈË»úÑéÖ¤</title>
+  <title>äººæœºéªŒè¯</title>
   <style>
     body {
       background-color: #f2f2f2;
@@ -59,38 +59,38 @@
 
 <body>
   <div class="captcha-container">
-    <h1>ÈË»úÑéÖ¤</h1>
-    <p>ÇëÈ·ÈÏÄú²»ÊÇ»úÆ÷ÈË£º</p>
+    <h1>äººæœºéªŒè¯</h1>
+    <p>è¯·ç¡®è®¤æ‚¨ä¸æ˜¯æœºå™¨äººï¼š</p>
     <div class="captcha-checkbox">
       <input type="checkbox" id="captcha-checkbox" name="captcha-checkbox" required>
-      <label for="captcha-checkbox">ÎÒ²»ÊÇ»úÆ÷ÈË</label>
+      <label for="captcha-checkbox">æˆ‘ä¸æ˜¯æœºå™¨äºº</label>
     </div>
-    <button type="submit" onclick="validateCaptcha()">Ìá½»</button>
+    <button type="submit" onclick="validateCaptcha()">æäº¤</button>
   </div>
 
   <script>
     function validateCaptcha() {
       var checkbox = document.getElementById("captcha-checkbox");
       if (checkbox.checked) {
-        alert("ÑéÖ¤³É¹¦£¡");
-        // ÔÚÕâÀï¿ÉÒÔÌí¼Ó¶îÍâµÄÂß¼­£¬ÀýÈçÖØ¶¨Ïòµ½ÆäËûÒ³Ãæ»òÖ´ÐÐÆäËû²Ù×÷
+        alert("éªŒè¯æˆåŠŸï¼");
+        // åœ¨è¿™é‡Œå¯ä»¥æ·»åŠ é¢å¤–çš„é€»è¾‘ï¼Œä¾‹å¦‚é‡å®šå‘åˆ°å…¶ä»–é¡µé¢æˆ–æ‰§è¡Œå…¶ä»–æ“ä½œ
       } else {
-        alert("ÇëÍê³ÉÈË»úÑéÖ¤£¡");
-        // ÔÚÕâÀï¿ÉÒÔÌí¼Ó¶îÍâµÄÂß¼­£¬ÀýÈçË¢ÐÂÑéÖ¤Âë»òÖ´ÐÐÆäËû²Ù×÷
+        alert("è¯·å®ŒæˆäººæœºéªŒè¯ï¼");
+        // åœ¨è¿™é‡Œå¯ä»¥æ·»åŠ é¢å¤–çš„é€»è¾‘ï¼Œä¾‹å¦‚åˆ·æ–°éªŒè¯ç æˆ–æ‰§è¡Œå…¶ä»–æ“ä½œ
       }
     }
   </script>
 
   <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // ¿ÉÒÔÔÚÕâÀïÌí¼Ó·þÎñÆ÷¶ËµÄÑéÖ¤Âß¼­
-    // ÀýÈç£¬¼ì²éÓÃ»§ÊÇ·ñ¹´Ñ¡ÁË¸´Ñ¡¿ò
+    // å¯ä»¥åœ¨è¿™é‡Œæ·»åŠ æœåŠ¡å™¨ç«¯çš„éªŒè¯é€»è¾‘
+    // ä¾‹å¦‚ï¼Œæ£€æŸ¥ç”¨æˆ·æ˜¯å¦å‹¾é€‰äº†å¤é€‰æ¡†
     if (isset($_POST['captcha-checkbox'])) {
-      // ÑéÖ¤³É¹¦£¬¿ÉÒÔÖ´ÐÐÆäËû²Ù×÷
-      echo "<script>alert('ÑéÖ¤³É¹¦£¡')</script>";
+      // éªŒè¯æˆåŠŸï¼Œå¯ä»¥æ‰§è¡Œå…¶ä»–æ“ä½œ
+      echo "<script>alert('éªŒè¯æˆåŠŸï¼')</script>";
     } else {
-      // ÑéÖ¤Ê§°Ü£¬¿ÉÒÔÖ´ÐÐÆäËû²Ù×÷
-      echo "<script>alert('ÇëÍê³ÉÈË»úÑéÖ¤£¡')</script>";
+      // éªŒè¯å¤±è´¥ï¼Œå¯ä»¥æ‰§è¡Œå…¶ä»–æ“ä½œ
+      echo "<script>alert('è¯·å®ŒæˆäººæœºéªŒè¯ï¼')</script>";
     }
   }
   ?>
